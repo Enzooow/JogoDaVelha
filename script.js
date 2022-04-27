@@ -50,48 +50,56 @@ function checarVencedor() {
     if(ChecarSequencia(quadrado1, quadrado2, quadrado3)) {
         mudaCorQuadrado(quadrado1, quadrado2, quadrado3);
         mudarVencedor(quadrado1);
+        alert("O vencedor foi o " + quadrado1.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado4, quadrado5, quadrado6)) {
         mudaCorQuadrado(quadrado4, quadrado5, quadrado6);
         mudarVencedor(quadrado4);
+        alert("O vencedor foi o " + quadrado4.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado7, quadrado8, quadrado9)) {
         mudaCorQuadrado(quadrado7, quadrado8, quadrado9);
         mudarVencedor(quadrado7);
+        alert("O vencedor foi o " + quadrado7.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado1, quadrado4, quadrado7)) {
         mudaCorQuadrado(quadrado1, quadrado4, quadrado7);
         mudarVencedor(quadrado1);
+        alert("O vencedor foi o " + quadrado1.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado2, quadrado5, quadrado8)) {
         mudaCorQuadrado(quadrado2, quadrado5, quadrado8);
         mudarVencedor(quadrado2);
+        alert("O vencedor foi o " + quadrado2.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado3, quadrado6, quadrado9)) {
         mudaCorQuadrado(quadrado3, quadrado6, quadrado9);
         mudarVencedor(quadrado3);
+        alert("O vencedor foi o " + quadrado3.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado1, quadrado5, quadrado9)) {
         mudaCorQuadrado(quadrado1, quadrado5, quadrado9);
         mudarVencedor(quadrado1);
+        alert("O vencedor foi o " + quadrado1.innerHTML +"!");
         return;
     }
 
     if(ChecarSequencia(quadrado3, quadrado5, quadrado7)) {
         mudaCorQuadrado(quadrado3, quadrado5, quadrado7);
         mudarVencedor(quadrado3);
+        alert("O vencedor foi o " + quadrado1.innerHTML +"!");
         return;
     }
 }
@@ -130,5 +138,12 @@ function reiniciar() {
         quadrado.innerHTML = '-'; 
     }
 
-    mudarJogador('X');
+    var novaRodada = Math.floor(Math.random()*2);
+
+    if(novaRodada === 1) {
+        mudarJogador('X');
+    }
+    else {
+        mudarJogador('O');
+    }
 }
